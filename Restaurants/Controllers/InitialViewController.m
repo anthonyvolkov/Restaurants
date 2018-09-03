@@ -29,14 +29,32 @@ static NSString * const kCellIdentifier = @"CellIdentifier";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    
     self.title = @"Restaurants";
     [self cofigureTableview];
+    
+    [self.table setContentOffset:CGPointMake(0, self.table.tableHeaderView.bounds.size.height)];
 }
 
 
 - (void)viewWillAppear:(BOOL)animated {
+    
+    if ([self.tabBarController.tabBar isHidden]) {
+        [self setTabBarVisibleWithAnimation];
+    }
+
     [self.table reloadData];
     [self updateDataSource];
+}
+
+-(void) setTabBarVisibleWithAnimation {
+    [self.tabBarController.tabBar setHidden:false];
+    
+    [UIView animateWithDuration:0.3f animations:^{
+        self.tabBarController.tabBar.center = CGPointMake(self.tabBarController.tabBar.center.x,
+                                                          self.tabBarController.tabBar.center.y - self.tabBarController.tabBar.bounds.size.height);
+    }];
 }
 
 - (void)cofigureTableview {

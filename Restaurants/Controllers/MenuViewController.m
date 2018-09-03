@@ -30,14 +30,6 @@ static NSString * const menuCellIdentifier = @"menuCellIdentifier";
     
     self.view.backgroundColor = [UIColor yellowColor];
     
-    UIBarButtonItem *buttonBack = [[UIBarButtonItem alloc] initWithTitle:nil
-                                                                   style:UIBarButtonItemStyleDone
-                                                                  target:self
-                                                                  action:@selector(backToAllRestaurants:)];
-    buttonBack.image = [UIImage imageNamed:@"btn-back.png"];
-    [self.navigationItem setLeftBarButtonItem:buttonBack];
-    
-    
     UIBarButtonItem *buttonAddToFavorites = [[UIBarButtonItem alloc] initWithTitle:nil
                                                                              style:UIBarButtonItemStyleDone
                                                                             target:self
@@ -56,24 +48,12 @@ static NSString * const menuCellIdentifier = @"menuCellIdentifier";
 
 -(void) setTabBarHiddenWithAnimation {
     
-    if ([self.tabBarController.tabBar isHidden]) {
-        
-        [self.tabBarController.tabBar setHidden:false];
-        
-        [UIView animateWithDuration:0.3f animations:^{
-            self.tabBarController.tabBar.center = CGPointMake(self.tabBarController.tabBar.center.x,
-                                                              self.tabBarController.tabBar.center.y - self.tabBarController.tabBar.bounds.size.height);
-        }];
-        
-    }else{
-
-        [UIView animateWithDuration:0.3f animations:^{
-            self.tabBarController.tabBar.center = CGPointMake(self.tabBarController.tabBar.center.x,
-                                                              self.view.bounds.size.height + self.tabBarController.tabBar.bounds.size.height / 2);
-        } completion:^(BOOL finished) {
-            [self.tabBarController.tabBar setHidden:true];
-        }];
-    }
+    [UIView animateWithDuration:0.3f animations:^{
+        self.tabBarController.tabBar.center = CGPointMake(self.tabBarController.tabBar.center.x,
+                                                          self.view.bounds.size.height + self.tabBarController.tabBar.bounds.size.height / 2);
+    } completion:^(BOOL finished) {
+        [self.tabBarController.tabBar setHidden:true];
+    }];
 }
 
 - (void)cofigureTableview {

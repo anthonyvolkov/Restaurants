@@ -86,7 +86,6 @@
 		2B9D87C42104D53B00C80034 /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9D87C32104D53B00C80034 /* FavoritesViewController.m */; };
 		2B9D87CA2104D91D00C80034 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9D87C92104D91D00C80034 /* MenuViewController.m */; };
 		2B9D87CE2104FCE300C80034 /* SQLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9D87CD2104FCE300C80034 /* SQLManager.m */; };
-		2B9D87D4210549D600C80034 /* btn-back.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B9D87D3210549D600C80034 /* btn-back.png */; };
 		2B9D87D8210A997300C80034 /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9D87D7210A997300C80034 /* Restaurant.m */; };
 		2B9D87DE210A9B7A00C80034 /* RestaurantDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9D87DD210A9B7A00C80034 /* RestaurantDAO.m */; };
 		2B9D87E4210D68FF00C80034 /* MenuDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9D87E3210D68FF00C80034 /* MenuDAO.m */; };
@@ -184,7 +183,6 @@
 		2B9D87C92104D91D00C80034 /* MenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		2B9D87CC2104FCE200C80034 /* SQLManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQLManager.h; sourceTree = "<group>"; };
 		2B9D87CD2104FCE300C80034 /* SQLManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQLManager.m; sourceTree = "<group>"; };
-		2B9D87D3210549D600C80034 /* btn-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-back.png"; sourceTree = "<group>"; };
 		2B9D87D6210A997300C80034 /* Restaurant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Restaurant.h; sourceTree = "<group>"; };
 		2B9D87D7210A997300C80034 /* Restaurant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Restaurant.m; sourceTree = "<group>"; };
 		2B9D87DC210A9B7A00C80034 /* RestaurantDAO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RestaurantDAO.h; sourceTree = "<group>"; };
@@ -230,7 +228,6 @@
 			children = (
 				2B9D872A2104BDE900C80034 /* restaurants-icon.png */,
 				2B9D87BD2104C18F00C80034 /* star.png */,
-				2B9D87D3210549D600C80034 /* btn-back.png */,
 				2B9D872B2104BDE900C80034 /* 1Res.png */,
 				2B9D87722104BDEA00C80034 /* 2Fav.png */,
 				2B9D872C2104BDE900C80034 /* Logos */,
@@ -521,7 +518,6 @@
 				2B9D87962104BDEA00C80034 /* DelTaco.png in Resources */,
 				2B9D87B42104BDEA00C80034 /* Whataburger.png in Resources */,
 				2B9D87A02104BDEA00C80034 /* Wendys.png in Resources */,
-				2B9D87D4210549D600C80034 /* btn-back.png in Resources */,
 				2B9D87822104BDEA00C80034 /* Blimpie.png in Resources */,
 				2B9D87AE2104BDEA00C80034 /* CiCisPizza.png in Resources */,
 				2B9D879A2104BDEA00C80034 /* TacoJ.png in Resources */,

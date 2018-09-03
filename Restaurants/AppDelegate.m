@@ -25,7 +25,7 @@
     
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
     tabBarController.tabBar.backgroundImage = [UIImage imageNamed:@"2Fav.png"];
-    tabBarController.tabBar.tintColor = [UIColor blackColor];
+    tabBarController.tabBar.tintColor = [UIColor blueColor];
     
     if (@available(iOS 10.0, *)) {
         [tabBarController.tabBar setUnselectedItemTintColor:[UIColor grayColor]];

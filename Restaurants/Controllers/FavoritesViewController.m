@@ -25,15 +25,32 @@ static NSString * const favoritesCellIdentifier = @"favoritesCellIdentifier";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    
     self.title = @"Favorites";
     
     [self cofigureTableview];
+    self.table.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    
+    if ([self.tabBarController.tabBar isHidden]) {
+        [self setTabBarVisibleWithAnimation];
+    }
+    
     [self updateDataSource];
     [self.table reloadData];
+}
+
+-(void) setTabBarVisibleWithAnimation {
+    [self.tabBarController.tabBar setHidden:false];
+    
+    [UIView animateWithDuration:0.3f animations:^{
+        self.tabBarController.tabBar.center = CGPointMake(self.tabBarController.tabBar.center.x,
+                                                          self.tabBarController.tabBar.center.y - self.tabBarController.tabBar.bounds.size.height);
+    }];
 }
 
 - (void)cofigureTableview {
